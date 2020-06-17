@@ -95,3 +95,5 @@ def get_text_messages(message):
 
 
 bot.polling(none_stop=True)
+
+bot.run("1122101091:AAFmyzjDxCdcL02oVcm6mPIOnbV62m_1gCA")

@@ -7,11 +7,11 @@ bot = telebot.TeleBot('1122101091:AAFmyzjDxCdcL02oVcm6mPIOnbV62m_1gCA')
 
 @bot.message_handler(commands=['start'])
 def welcome(message):
-    sti = open ('welcome.png', 'rb')
+    sti = open ('welcome.webp', 'rb')
     bot.send_sticker(message.chat.id, sti)
 
     #keyboard
-    markup = types.ReplyKeyboardMarkup()
+    markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     item1 = types.KeyboardButton("🍺Пиво")
     item2 = types.KeyboardButton("🍷Вино")
     item3 = types.KeyboardButton("Ром")

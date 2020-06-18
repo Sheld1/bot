@@ -16,7 +16,7 @@ def welcome(message):
     item3 = types.KeyboardButton("Ром")
     item4 = types.KeyboardButton("Коньяк")
     item5 = types.KeyboardButton("Виски")
-    markup = types.ReplyKeyboardMarkup().row(item1, item2, item3, item4, item5)
+    markup = types.ReplyKeyboardMarkup().add(item1, item2, item3, item4, item5)
 
     bot.send_message(message.chat.id, "Добро пожаловать, {0.first_name}!\nЯ - <b>{1.first_name}</b>, бот созданный, чтобы облегчить твой выбор бухлишка на тусу.".format(message.from_user, bot.get_me()),
     parse_mode ='html', reply_markup=markup)

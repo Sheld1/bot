@@ -11,12 +11,13 @@ def welcome(message):
     bot.send_sticker(message.chat.id, sti)
 
     #keyboard
+    markup = types.ReplyKeyboardMarkup()
     item1 = types.KeyboardButton("🍺Пиво")
     item2 = types.KeyboardButton("🍷Вино")
     item3 = types.KeyboardButton("Ром")
     item4 = types.KeyboardButton("Коньяк")
     item5 = types.KeyboardButton("Виски")
-    markup = types.ReplyKeyboardMarkup().add(item1, item2, item3, item4, item5)
+    markup.add(item1, item2, item3, item4, item5)
 
     bot.send_message(message.chat.id, "Добро пожаловать, {0.first_name}!\nЯ - <b>{1.first_name}</b>, бот созданный, чтобы облегчить твой выбор бухлишка на тусу.".format(message.from_user, bot.get_me()),
     parse_mode ='html', reply_markup=markup)
